@@ -8,7 +8,7 @@
                 "CMAKE_CXX_FLAGS": "$env{PRESET_CXX_FLAGS} $env{INTEL_CXX_FLAGS} $env{LLVM_CXX_FLAGS} $env{COMMON_CXX_FLAGS}"
             },
             "environment": {
-                "COMMON_CXX_FLAGS": "-Dgsl_CONFIG_CONTRACT_CHECKING_OFF -Wno-tautological-constant-compare -Wno-openmp-mapping"
+                "COMMON_CXX_FLAGS": "-Dgsl_CONFIG_CONTRACT_CHECKING_OFF -Wno-tautological-constant-compare -Wno-openmp-mapping -Wno-format -Wno-switch -Wno-return-type -Wno-unused-command-line-argument"
             }
         },
         {
@@ -28,7 +28,7 @@
                 "CMAKE_CXX_COMPILER": "mpic++"
             },
             "environment": {
-                "INTEL_CXX_FLAGS": "-fiopenmp"
+                "INTEL_CXX_FLAGS": "-fiopenmp -fopenmp-declare-target-scalar-defaultmap=firstprivate"
             }
         },
         {
