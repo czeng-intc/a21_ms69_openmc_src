@@ -28,7 +28,7 @@
                 "CMAKE_CXX_COMPILER": "mpic++"
             },
             "environment": {
-                "INTEL_CXX_FLAGS": "-fiopenmp -fopenmp-declare-target-scalar-defaultmap=firstprivate"
+                "INTEL_CXX_FLAGS": "-fiopenmp -fopenmp-declare-target-scalar-defaultmap=firstprivate -fopenmp-device-code-split=per_kernel -fopenmp-max-parallel-link-jobs=64"
             }
         },
         {
